@@ -28,7 +28,7 @@ Using **rticles** has some prerequisites which are described below. You can get 
 
 -->
 
-### Using faodoc from RStudio
+### Using kazdoc from RStudio
 
 To use **kazdoc** from RStudio:
 
@@ -45,7 +45,7 @@ devtools::install_github("muuankarski/kazdoc")
 ![New R Markdown](http://rmarkdown.rstudio.com/images/new_r_markdown.png)
     
     
-### Using faodoc outside of RStudio
+### Using kazdoc outside of RStudio
 
 1) Install [pandoc](http://johnmacfarlane.net/pandoc/) using the [instructions for your platform](https://github.com/rstudio/rmarkdown/blob/master/PANDOC.md).
 
