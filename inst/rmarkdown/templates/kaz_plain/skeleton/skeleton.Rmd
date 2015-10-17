@@ -1,0 +1,58 @@
+---
+title: A Skeleton for one type of pdf report
+author:
+  - name: Author One
+    affiliation: Central Bank of Country A
+    address:
+    - Street X, building Y
+    - City Z, Country Q
+    email:  author1@work.com
+  - name: Author Two
+    affiliation: Central Bank of Country A
+    address:
+    - Street X, building Y
+    - City Z, Country Q
+    email:  author2@work.com
+abstract: >
+  This is an abstract. It is written in YAML preamble of skeleton.Rmd.
+preamble: >
+  % Any extra latex you need in the preamble
+output: kazdoc::kaz_plain
+---
+
+# Data retrieval
+
+Aenean et nulla ante. Etiam id luctus mauris. Pellentesque vestibulum, urna eu fermentum lacinia, est erat fermentum nulla, id tincidunt ipsum neque et nisi. Mauris luctus nibh quis urna porttitor, nec facilisis mi ullamcorper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer urna turpis, tincidunt sed erat id, euismod vestibulum felis. Nulla scelerisque tellus lorem, a interdum felis pretium nec. Proin auctor odio est, eget eleifend felis sagittis id. Pellentesque aliquam nulla sit amet fringilla blandit. Ut interdum sapien quis est ornare, quis ultricies lacus euismod. Proin quis lacinia urna, vitae condimentum urna. Quisque mollis faucibus viverra. Mauris blandit vulputate volutpat.
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+# Data storage
+
+Aenean et nulla ante. Etiam id luctus mauris. Pellentesque vestibulum, urna eu fermentum lacinia, est erat fermentum nulla, id tincidunt ipsum neque et nisi. Mauris luctus nibh quis urna porttitor, nec facilisis mi ullamcorper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer urna turpis, tincidunt sed erat id, euismod vestibulum felis. Nulla scelerisque tellus lorem, a interdum felis pretium nec. Proin auctor odio est, eget eleifend felis sagittis id. Pellentesque aliquam nulla sit amet fringilla blandit. Ut interdum sapien quis est ornare, quis ultricies lacus euismod. Proin quis lacinia urna, vitae condimentum urna. Quisque mollis faucibus viverra. Mauris blandit vulputate volutpat.
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Aenean et nulla ante. Etiam id luctus mauris. Pellentesque vestibulum, urna eu fermentum lacinia, est erat fermentum nulla, id tincidunt ipsum neque et nisi. Mauris luctus nibh quis urna porttitor, nec facilisis mi ullamcorper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer urna turpis, tincidunt sed erat id, euismod vestibulum felis. Nulla scelerisque tellus lorem, a interdum felis pretium nec. Proin auctor odio est, eget eleifend felis sagittis id. Pellentesque aliquam nulla sit amet fringilla blandit. Ut interdum sapien quis est ornare, quis ultricies lacus euismod. Proin quis lacinia urna, vitae condimentum urna. Quisque mollis faucibus viverra. Mauris blandit vulputate volutpat.
+
+
+# Analytics
+
+Aenean et nulla ante. Etiam id luctus mauris. Pellentesque vestibulum, urna eu fermentum lacinia, est erat fermentum nulla, id tincidunt ipsum neque et nisi. Mauris luctus nibh quis urna porttitor, nec facilisis mi ullamcorper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer urna turpis, tincidunt sed erat id, euismod vestibulum felis. Nulla scelerisque tellus lorem, a interdum felis pretium nec. Proin auctor odio est, eget eleifend felis sagittis id. Pellentesque aliquam nulla sit amet fringilla blandit. Ut interdum sapien quis est ornare, quis ultricies lacus euismod. Proin quis lacinia urna, vitae condimentum urna. Quisque mollis faucibus viverra. Mauris blandit vulputate volutpat.
+
+```{r, echo=FALSE}
+knitr::kable(head(mtcars))
+```
+
+Aenean et nulla ante. Etiam id luctus mauris. Pellentesque vestibulum, urna eu fermentum lacinia, est erat fermentum nulla, id tincidunt ipsum neque et nisi. Mauris luctus nibh quis urna porttitor, nec facilisis mi ullamcorper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer urna turpis, tincidunt sed erat id, euismod vestibulum felis. Nulla scelerisque tellus lorem, a interdum felis pretium nec. Proin auctor odio est, eget eleifend felis sagittis id. Pellentesque aliquam nulla sit amet fringilla blandit. Ut interdum sapien quis est ornare, quis ultricies lacus euismod. Proin quis lacinia urna, vitae condimentum urna. Quisque mollis faucibus viverra. Mauris blandit vulputate volutpat.
+
+# Reporting
+
+Aenean et nulla ante. Etiam id luctus mauris. Pellentesque vestibulum, urna eu fermentum lacinia, est erat fermentum nulla, id tincidunt ipsum neque et nisi. Mauris luctus nibh quis urna porttitor, nec facilisis mi ullamcorper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer urna turpis, tincidunt sed erat id, euismod vestibulum felis. Nulla scelerisque tellus lorem, a interdum felis pretium nec. Proin auctor odio est, eget eleifend felis sagittis id. Pellentesque aliquam nulla sit amet fringilla blandit. Ut interdum sapien quis est ornare, quis ultricies lacus euismod. Proin quis lacinia urna, vitae condimentum urna. Quisque mollis faucibus viverra. Mauris blandit vulputate volutpat.
+
+# Acknowledgments {-}
+
+Aenean et nulla ante. Etiam id luctus mauris. Pellentesque vestibulum, urna eu fermentum lacinia, est erat fermentum nulla, id tincidunt ipsum neque et nisi. Mauris luctus nibh quis urna porttitor, nec facilisis mi ullamcorper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer urna turpis, tincidunt sed erat id, euismod vestibulum felis. Nulla scelerisque tellus lorem, a interdum felis pretium nec. Proin auctor odio est, eget eleifend felis sagittis id. Pellentesque aliquam nulla sit amet fringilla blandit. Ut interdum sapien quis est ornare, quis ultricies lacus euismod. Proin quis lacinia urna, vitae condimentum urna. Quisque mollis faucibus viverra. Mauris blandit vulputate volutpat.

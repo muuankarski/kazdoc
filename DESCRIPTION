@@ -1,0 +1,11 @@
+Package: kazdoc
+Type: Package
+Title: document templates for Rmarkdown for rstatscon
+Version: 0.1.0.1
+Date: 2015-10-17
+Author: Markus Kainu
+Maintainer: Markus Kainu <markus.kainu@gmail.com>
+Description: More about what it does (maybe more than one line)
+License: GPL-3
+Imports:
+    rmarkdown
