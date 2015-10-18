@@ -24,10 +24,6 @@
 \usepackage{sectsty}
 \allsectionsfont{\sffamily}
 
-%\defaultfontfeatures{Mapping = tex-text, Scale = MatchLowercase}
-
-
-
 %% Set polyglossia language
 \usepackage{polyglossia}
 \setdefaultlanguage{english}
@@ -44,9 +40,6 @@
 %                                                  %
 % ------------------------------------------------ %
 
-
-
-
 %% for Shaded environment in knitr
 \usepackage{framed}
 \usepackage{fancyhdr}
@@ -54,11 +47,10 @@
 %% landscape mode
 \usepackage{lscape}
 
-
 %% Encoding
 %\usepackage[UTF-8]{inputenc}
 
-% rivinväli
+% rowspacing
 \usepackage{setspace}
 
 % ------------------------------------------------ %
@@ -67,12 +59,7 @@
 %                                                  %
 % ------------------------------------------------ %
 
-
-
-% Page
-
 %% Use full page in book style
-%\usepackage[cm]{fullpage}
 \usepackage[top=3.5cm, bottom=3.5cm, left=1.5cm, right=1.5cm]{geometry}
 
 %% Set line spacing
@@ -83,7 +70,6 @@
 \usepackage{parskip}
 
 %% Custom headers
-
 \usepackage{fancyhdr}
 
 % ------------------------------------------------ %
@@ -92,22 +78,17 @@
 %                                                  %
 % ------------------------------------------------ %
 
-%% Start sections from new page
-% \let\stdsection\section
-% \renewcommand\section{\newpage\section}
 \usepackage{titlesec, blindtext, color}
-%\newcommand{\sectionbreak}{\clearpage} % ei osanvaihtoa section otsikon yhteydessä
-% pisteet otsikoiden numeroiden jälkeen
-%\titlelabel{\thetitle.\quad} % ei tarvita koska ei pisteitä otsikoihin
 
 % spacin before and after the section titles
 \titlespacing*{\section}{0pt}{2.5ex}{0.5ex}
 \titlespacing*{\subsection}{0pt}{0.2ex}{0.2ex}
 
 %\definecolor{SkyBlue}{HTML}{3465A4}
-\definecolor{vihrea}{RGB}{26,150,65}
+\definecolor{green}{RGB}{26,150,65}
 \newcommand{\hsp}{\hspace{20pt}}
-\titleformat{\section}[hang]{\large\bfseries}{\thesection\hsp\textcolor{vihrea}{|}\hsp}{0pt}{\large\bfseries}
+% add the green vertical line after 1st level heading
+\titleformat{\section}[hang]{\large\bfseries}{\thesection\hsp\textcolor{green}{|}\hsp}{0pt}{\large\bfseries}
 
 \usepackage{enumerate}
 
@@ -121,20 +102,12 @@
 %                                                  %
 % ------------------------------------------------ %
 
-% sisällysluettelon pisteviivat
+% dotted lines for table of content
 
 \makeatletter
 \renewcommand*\l@section{\@dottedtocline{1}{1.5em}{2.3em}}
 \makeatother
 \setcounter{tocdepth}{1}
-
-% sisällysluettelon leveys
-
-%\usepackage{setspace, tocloft}
-%\renewcommand{\cftsecafterpnum}{\hspace*{7.5em}}
-%\renewcommand{\cftsubsecafterpnum}{\hspace*{7.5em}}
-
-
 
 % ------------------------------------------------ %
 %                                                  %
@@ -146,20 +119,17 @@
 %% Tango color scheme
 \definecolor{SkyBlue}{HTML}{3465A4}
 \definecolor{DarkSkyBlue}{HTML}{204A87}
-
-\definecolor{KevaGreen}{HTML}{7FC241}
-
 \definecolor{Plum}{HTML}{75507B}
-
 \definecolor{ScarletRed}{HTML}{CC0000}
-
 \definecolor{Aluminium1}{HTML}{EEEEEC}
 \definecolor{Aluminium6}{HTML}{2e3436}
-
 \definecolor{Black}{HTML}{000000}
-\definecolor{oranssi}{HTML}{F8981D}
 
-% Links
+% ------------------------------------------------ %
+%                                                  %
+%               Links                              %
+%                                                  %
+% ------------------------------------------------ %
 
 %% Hyperref
 \usepackage[colorlinks, breaklinks, bookmarks]{hyperref}
@@ -181,24 +151,16 @@
 %                                                  %
 % ------------------------------------------------ %
 
-
-
 % Images
 \usepackage{graphicx}
-
-
 % tables
 \usepackage{longtable}
 \usepackage{booktabs}
-
 \usepackage{float}
 \restylefloat{table}
 
  \renewcommand\arraystretch{1.1} % table rowheight
 % see: http://everythingyouforgetaboutlatex.blogspot.fi/2008/10/formatting-tables.html
-
-%\setlength{\floatsep}{0.1cm} % spacing between floats and text
-%\setlength{\textfloatsep}{0.1cm} % spacing between floats
 \setlength{\intextsep}{-0.1cm} % spacing between floats
 
 
@@ -214,16 +176,16 @@
 \usepackage{calc}%    for \widthof
 \usepackage{pgf}%     for math calclations
 
-\newlength{\Size}
-\newcommand*{\PositionText}[3][l]{%
-    \IfStrEqCase{#1}{%
-        {l}{\noindent\hspace{#2}#3}%
-        {c}{\pgfmathsetlength{\Size}{#2-0.5*(\widthof{#3})}\noindent\hspace{\Size}#3}%
-        {r}{\pgfmathsetlength{\Size}{#2-1.0*(\widthof{#3})}\noindent\hspace{\Size}#3}%
-        }[\PackageError{PositionText}
-            {\MessageBreak Unrecognized alignment: #1.\MessageBreak
-            Valid alignments are are `l`, `c`, `r'}{}]%
-}%
+% \newlength{\Size}
+% \newcommand*{\PositionText}[3][l]{%
+%     \IfStrEqCase{#1}{%
+%         {l}{\noindent\hspace{#2}#3}%
+%         {c}{\pgfmathsetlength{\Size}{#2-0.5*(\widthof{#3})}\noindent\hspace{\Size}#3}%
+%         {r}{\pgfmathsetlength{\Size}{#2-1.0*(\widthof{#3})}\noindent\hspace{\Size}#3}%
+%         }[\PackageError{PositionText}
+%             {\MessageBreak Unrecognized alignment: #1.\MessageBreak
+%             Valid alignments are are `l`, `c`, `r'}{}]%
+% }%
 
 
 % First page background graphics
@@ -238,49 +200,24 @@ keepaspectratio]{bg_1st_page.pdf}%
 \vfill
 }}}
 %
+% Embedding
 \usepackage{pdfpages}
 
-% % lukuohjesivun tausta
-% \newcommand\taustatoka{%
-% \put(0,0){%
-% \parbox[b][\paperheight]{\paperwidth}{%
-% \vfill
-% \centering
-% \includegraphics[width=\paperwidth,height=\paperheight,%
-% keepaspectratio]{../logo/lukuohje.pdf}%
-% \vfill
-% }}}
+% % ------------------------------------------------ %
+% %                                                  %
+% %               Absolute text positions            %
+% %                                                  %
+% % ------------------------------------------------ %
 %
-% % johtopäätösivujen tausta
-% \newcommand\taustajohtopaatokset{%
-% \put(0,0){%
-% \parbox[b][\paperheight]{\paperwidth}{%
-% \vfill
-% \centering
-% \includegraphics[width=\paperwidth,height=\paperheight,%
-% keepaspectratio]{../logo/lukuohje_tausta_tyhja.pdf}%
-% \vfill
-% }}}
+%
+% \usepackage[absolute]{textpos}
+%
+% \setlength{\TPHorizModule}{30mm}
+% \setlength{\TPVertModule}{\TPHorizModule}
+% \textblockorigin{10mm}{10mm} % start everything near the top-left corner
+% \setlength{\parindent}{0pt}
 
-% ------------------------------------------------ %
-%                                                  %
-%               Absolute text positions            %
-%                                                  %
-% ------------------------------------------------ %
-
-
-\usepackage[absolute]{textpos}
-
-\setlength{\TPHorizModule}{30mm}
-\setlength{\TPVertModule}{\TPHorizModule}
-\textblockorigin{10mm}{10mm} % start everything near the top-left corner
-\setlength{\parindent}{0pt}
-
-
-
-
-
-% Otsikkotiedot - \maketitle :n modaus
+% Modifying the title
 
 \makeatletter
 \renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
@@ -290,6 +227,8 @@ keepaspectratio]{bg_1st_page.pdf}%
   \large \textbf{\@author}
 
   \textsc{\normalsize \@date }
+
+  % \textsc{\normalsize \@daffiliation }
 
   \hrulefill
 \end{flushleft}\egroup
@@ -306,43 +245,25 @@ keepaspectratio]{bg_1st_page.pdf}%
 
 \vspace{400 mm}
 
-% \let\originalnewpage\newpage
-% \let\newpage\relax
 \title{$title$}
 \author{by $for(author)$$author.name$$sep$, $endfor$}
-%\author{by $for(author)$$author.affiliation$$sep$, $endfor$}
+% \affiliation{by $for(author)$$author.affiliation$$sep$, $endfor$}
 
 \maketitle
 
-%$if(abstract)$
-%\abstract{
-%$abstract$
-%}
-% $endif$
 
+%---- TOC begin
 \begingroup
-
-\textbf{Table of Content title}
+\textbf{Table of Content}
 \vspace{-10mm}
 \let\cleardoublepage\relax
 \let\clearpage\relax
 \renewcommand\contentsname{}
 \tableofcontents
 \endgroup
-
 \hrulefill
+%---- TOC end
 
 $body$
-
-% $for(author)$
-% % \address{
-% % $author.name$\\
-% % $author.affiliation$\\
-% % $for(author.address)$$author.address$$sep$\\ $endfor$\\
-% % }
-% $if(author.email)$$author.email$$endif$
-
-% $endfor$
-
 
 \end{document}
