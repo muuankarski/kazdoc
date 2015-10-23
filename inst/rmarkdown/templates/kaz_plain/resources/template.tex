@@ -20,6 +20,10 @@
 %\setsansfont{Ubuntu}
 %\setmonofont{Ubuntu}
 
+
+%% Sans serif as main font
+\renewcommand{\familydefault}{\sfdefault}
+
 %% Set Sans font in headings
 \usepackage{sectsty}
 \allsectionsfont{\sffamily}
@@ -78,7 +82,8 @@
 %                                                  %
 % ------------------------------------------------ %
 
-\usepackage{titlesec, blindtext, color}
+% \usepackage{titlesec, blindtext, color}
+\usepackage{titlesec, color}
 
 % spacin before and after the section titles
 \titlespacing*{\section}{0pt}{2.5ex}{0.5ex}

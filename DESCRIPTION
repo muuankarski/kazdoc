@@ -1,7 +1,7 @@
 Package: kazdoc
 Type: Package
 Title: document templates for Rmarkdown for rstatscon
-Version: 0.1.0.1
+Version: 0.1.0.2
 Date: 2015-10-17
 Author: Markus Kainu
 Maintainer: Markus Kainu <markus.kainu@gmail.com>
